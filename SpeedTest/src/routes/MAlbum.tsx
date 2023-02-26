@@ -186,7 +186,6 @@ const MAlbum = () => {
       <Summary />
       <br />
       <Selection />
-      {/* <SecondBox /> */}
       <Footer />
     </>
   );

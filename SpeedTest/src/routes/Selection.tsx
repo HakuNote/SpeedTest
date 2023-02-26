@@ -73,14 +73,15 @@ const Selection = () => {
     return (
         <ThemeProvider theme={selectionTheme}>
             <Grid container spacing={2} bgcolor='primary'>
-                <Grid item xs={12} sm={6}>
-                    <Container>
+                
+                <Grid item xs={6} sm={3}>
+                    <Container >
                         <FormControl fullWidth sx={{
                             width: '150px',
                             color: 'primary.main',
                             border: '10px solidx blue'
                         }} margin='normal'>
-                            <InputLabel id="Floor" sx ={{color: 'primary.main'}}>Floor</InputLabel>
+                            <InputLabel id="Floor">Floor</InputLabel>
                             <Select
                             labelId="Floor-Label"
                             id="Floor-Id"
@@ -88,7 +89,7 @@ const Selection = () => {
                             label="Floor"
                             onChange={handleChange}
                             >
-                                <MenuItem value={'1'} sx={{color:'primary.main'}}>1층</MenuItem>
+                                <MenuItem value={'1'}>1층</MenuItem>
                                 <MenuItem value={'2'}>2층</MenuItem>
                                 <MenuItem value={'3'}>3층</MenuItem>
                                 <MenuItem value={'4'}>4층</MenuItem>
@@ -96,10 +97,10 @@ const Selection = () => {
                                 <MenuItem value={'6'}>6층</MenuItem>
                             </Select>
                         </FormControl >
-            </Container>
-
-                <RoomSplit floor={floor} />
+                    </Container>
+                    <RoomSplit floor={floor} />
                 </Grid>
+
 
             </Grid>
             </ThemeProvider>
